@@ -1,5 +1,7 @@
 package less8;
 
+import java.util.Scanner;
+
 
 public class Main {
 
@@ -16,5 +18,11 @@ public class Main {
 		person2.print();
 		person2.add(10);
 		System.out.println(person2.array[7]);
+		Scanner sc = new Scanner(System.in);
+		Chyslo chyslo = new Chyslo();
+		chyslo.speak();
+		int data = sc.nextInt();
+		chyslo.parnist(data);
+		sc.close();
 	}
 }
