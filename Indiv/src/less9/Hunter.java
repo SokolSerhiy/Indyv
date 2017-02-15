@@ -2,34 +2,38 @@ package less9;
 
 public class Hunter extends Human{
 
-	int killedMammonts = 0;
+	private int killedMammonts = 0;
 	
-	Hunter() {}
+	public Hunter() {}
 	
-	Hunter(int age, String name) {
+	public Hunter(int age, String name) {
 		super(age, name);
 	}
 	
-	void eatMeat(String meat){
-		System.out.println(name+": mmm nyam-nyam "+meat);
+	public void eatMeat(String meat){
+		System.out.println(getName()+": mmm nyam-nyam "+meat);
 	}
 	
-	void eatMeat(){
+	public void eatMeat(){
 		run();
 		killedMammonts++;
-		System.out.println(name+": I kill "+killedMammonts+
+		System.out.println(getName()+": I kill "+killedMammonts+
 				" mammonts");
 		eatMeat("mammont meat");
 	}
 	
+	public int getKilledMammonts(){
+		return killedMammonts;
+	}
+	
 	@Override
-	void run(){
-		System.out.println(name+": faster go-go-go");
+	public void run(){
+		System.out.println(getName()+": faster go-go-go");
 	}
 
 	@Override
 	public String toString() {
-		return "Hunter [killedMammonts=" + killedMammonts + ", age=" + age
-				+ ", name=" + name + "]";
+		return "Hunter [killedMammonts=" + killedMammonts + ", age=" + getAge()
+				+ ", name=" + getName() + "]";
 	}
 }

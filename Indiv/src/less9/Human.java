@@ -2,24 +2,49 @@ package less9;
 
 public class Human {
 
-	int age;
+	private int age;
 	
-	String name;
+	private String name;
 	
-	Human(){}
+	private static int count;
 	
-	Human(int age, String name){
+	public Human(){
+		count++;
+	}
+	
+	public Human(int age, String name){
+		this();
 		this.age = age;
 		this.name = name;
 	}
 	
-	void run(){
+	public void run(){
 		System.out.println(name+": go-go-go");
 	}
 	
-	void birthDay(){
+	public void birthDay(){
 		age++;
 		System.out.println(name+": Now I am "+age+" years old");
+	}
+	
+	public static void printCount(){
+		System.out.println("Count of humans " + count);
+	}
+	
+	public int getAge(){
+		return age;
+	}
+	
+	public String getName(){
+		return name;
+	}
+	
+	public void setAge(int age){
+		this.age = age;
+	}
+	
+	public void setName(String name){
+		this.name = name;
 	}
 	
 	public String toString(){
