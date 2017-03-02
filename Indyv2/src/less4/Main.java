@@ -8,6 +8,7 @@ public class Main {
 //		Ssd ssd = new Ssd(128);
 		Computer computer = new Computer(new Cpu(3.4), new Ram(1333, 8), new Ssd(128));
 //		cpu.setFrequency(3.6);
+//		computer.setCpu(new Cpu(3.9));
 		System.out.println(computer);
 		computer.turboBoost();
 		System.out.println(computer);
