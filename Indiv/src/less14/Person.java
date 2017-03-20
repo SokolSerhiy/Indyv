@@ -1,6 +1,6 @@
 package less14;
 
-public class Person {
+public class Person implements Comparable<Person>{
 
 	private String name;
 	
@@ -66,5 +66,10 @@ public class Person {
 	public String toString() {
 		return "Person [name=" + name + ", age=" + age + ", gender=" + gender
 				+ "]";
+	}
+
+	@Override
+	public int compareTo(Person o) {
+		return -(this.age-o.age);
 	}
 }
