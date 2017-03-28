@@ -1,6 +1,10 @@
 package less11;
 
-public class Person {
+import java.io.Serializable;
+
+public class Person implements Serializable{
+
+	private static final long serialVersionUID = 6570988301130862804L;
 
 	private String firstName;
 	

@@ -1,5 +1,6 @@
 package less11;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,8 +10,10 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-public class Bank {
+public class Bank implements Serializable{
 
+	private static final long serialVersionUID = -6571838622000652181L;
+	
 	private final Map<Person, List<Acount>> bank = new HashMap<>();
 	private final List<Integer> numbers = new ArrayList<>();
 	

@@ -1,8 +1,11 @@
 package less11;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
-public class Acount {
+public class Acount implements Serializable{
+
+	private static final long serialVersionUID = 7156925426919725157L;
 
 	private int number;
 	
