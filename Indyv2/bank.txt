@@ -1,1 +1,2 @@
-Person [firstName=Ivan, lastName=Ivanovsky]
+Ivan Ivanovsky 1 3652.65
+Petro Petrovskiy

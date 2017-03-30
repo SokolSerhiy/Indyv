@@ -34,6 +34,6 @@ public class Acount implements Serializable{
 
 	@Override
 	public String toString() {
-		return "Acount [number=" + number + ", balance=" + balance + "]";
+		return "Acount number=" + number + ", balance=" + balance;
 	}
 }

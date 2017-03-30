@@ -57,4 +57,8 @@ public class Bank implements Serializable{
 	public List<Integer> getNumbers(){
 		return numbers;
 	}
+
+	public Map<Person, List<Acount>> getBank() {
+		return bank;
+	}
 }
