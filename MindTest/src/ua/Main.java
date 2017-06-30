@@ -77,19 +77,20 @@ public class Main {
 	}
 	
 	static int findOffsetTop(BufferedImage old){
-		int offset = 0;
-		boolean offsetFinded = false;
+//		int offset = 0;
+//		boolean offsetFinded = false;
 		for (int row = 0; row < old.getHeight(); row++) {
 			int lineSum = 0;
 			for (int col = 0; col < old.getWidth(); col++) {
 				lineSum += old.getRGB(col, row);
 			}
-			if(lineSum==0&&!offsetFinded){
-				offset = row;
-			}else{
-				offsetFinded = true;
-			}
-			if(offsetFinded)return offset;
+			if(lineSum!=0) return row;
+//			if(lineSum==0&&!offsetFinded){
+//				offset = row;
+//			}else{
+//				offsetFinded = true;
+//			}
+//			if(offsetFinded)return offset;
 		}
 		return 0;
 	}
